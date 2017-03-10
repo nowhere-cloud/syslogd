@@ -9,8 +9,8 @@ Syslogd(function(info) {
     //console.log(info)
     info.port = null // port is random
     var shouldRet = {
-          facility: 7
-        , severity: 22
+          facility: 22
+        , severity: 7
         , tag: 'tag'
         , time: new Date(time + ' ' + new Date().getFullYear())
         , hostname: 'hostname'
