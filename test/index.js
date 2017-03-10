@@ -23,12 +23,12 @@ Syslogd(function(info) {
     assert.deepEqual(shouldRet, info)
     console.log('test pass!')
     process.exit(0)
-}).listen(514, function(err) { // sudo
+}).listen(65500, function(err) { // sudo
     console.log('listen', err)
     assert(!err)
     var client = dgram.createSocket('udp4')
     var buffer = new Buffer(testMsg)
-    client.send(buffer, 0, buffer.length, 514, 'localhost', function(err, bytes) {
+    client.send(buffer, 0, buffer.length, 65500, 'localhost', function(err, bytes) {
         console.log('send', err, bytes)
     })       
 })
