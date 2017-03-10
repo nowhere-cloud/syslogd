@@ -82,8 +82,8 @@ function parser(msg, rinfo) {
     time = new Date(time)
     time.setYear(new Date().getFullYear()) // fix year to now
     return {
-          facility: pri[0]
-        , severity: pri[1]
+          facility: pri[1]
+        , severity: pri[0]
         , tag: tag
         , time: time
         , hostname: hostname
